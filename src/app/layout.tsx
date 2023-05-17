@@ -1,7 +1,11 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
+import 'swiper/css';
 
-const inter = Inter({ subsets: ['latin'] });
+const poppins = Poppins({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+});
 
 export const metadata = {
   title: 'RocketFlix',
@@ -16,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${inter.className} bg-zinc-950 text-zinc-100 scrollbar-thin scrollbar-track-zinc-900 scrollbar-thumb-zinc-500`}
+        className={`${poppins.className} bg-zinc-950 text-zinc-100 scrollbar-thin scrollbar-track-zinc-900 scrollbar-thumb-zinc-500`}
       >
         {children}
       </body>
